@@ -1,28 +1,6 @@
-sudo: false
-
-before_install:
-  - pip install --quiet coveralls
-  - pip install codecov
-
-language: python
-
-python:
-  - "3.6"
+language: node_js
 node_js:
-  - "8"
-
-install:
-  - pip install -r requirements.txt
-
-script:
-  - python manage.py makemigrations
-  - coverage run manage.py test
-  - coverage report
-
-  - pylint eas
-
-after_success:
-  - coveralls
+- "9"
 
 deploy:
   provider: script
@@ -30,5 +8,3 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-
-
