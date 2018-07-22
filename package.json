@@ -9,5 +9,8 @@
     "fs": false
   },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "swagger": "^0.7.5",
+    "swagger-editor": "^3.6.6"
+  }
 }
