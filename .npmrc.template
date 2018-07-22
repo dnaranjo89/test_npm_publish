@@ -1,3 +1,3 @@
 always-auth=true
-registry=https://packagecloud.io/dnaranjo/test_ridock_npm/npm/
-//packagecloud.io/dnaranjo/test_ridock_npm/npm/:_authToken=${API_TOKEN}
+registry=https://registry.npmjs.org/
+//registry.npmjs.org/:_authToken=${API_TOKEN}
