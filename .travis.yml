@@ -1,7 +1,23 @@
-language: node_js
-node_js:
-  - "6"
-  - "6.1"
-  - "5"
-  - "5.11"
+sudo: false
 
+before_install:
+  - pip install --quiet coveralls
+  - pip install codecov
+
+language: python
+
+python:
+  - "3.6"
+
+install:
+  - pip install -r requirements/local.txt
+
+script:
+  - python manage.py makemigrations
+  - coverage run manage.py test
+  - coverage report
+
+  - pylint eas
+
+after_success:
+  - coveralls
