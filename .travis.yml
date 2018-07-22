@@ -1,23 +1,27 @@
-sudo: false
+matrix:
+  include:
+    - language: python
+      before_install:
+        - pip install --quiet coveralls
+        - pip install codecov
 
-before_install:
-  - pip install --quiet coveralls
-  - pip install codecov
+      language: python
 
-language: python
+      python:
+        - "3.6"
 
-python:
-  - "3.6"
+      install:
+        - pip install -r requirements/local.txt
 
-install:
-  - pip install -r requirements/local.txt
+    - language: node_js
+      node_js:
+        - "9"
+        
+      deploy:
+        provider: script
+        script: "cp .npmrc.template $HOME/.npmrc && npm publish"
+        skip_cleanup: true
+        on:
+          tags: true
 
-script:
-  - python manage.py makemigrations
-  - coverage run manage.py test
-  - coverage report
 
-  - pylint eas
-
-after_success:
-  - coveralls
