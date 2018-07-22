@@ -11,6 +11,16 @@ python:
 node_js:
   - "8"
 
+install:
+  - pip install -r requirements.txt
+
+script:
+  - python manage.py makemigrations
+  - coverage run manage.py test
+  - coverage report
+
+  - pylint eas
+
 after_success:
   - coveralls
 
