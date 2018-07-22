@@ -15,8 +15,8 @@ matrix:
 
     - language: node_js
       node_js:
-        - "9"
-        
+        - "8"
+
       deploy:
         provider: script
         script: "cp .npmrc.template $HOME/.npmrc && npm publish"
