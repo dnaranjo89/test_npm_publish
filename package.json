@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "JS SDK",
   "license": "Unlicense",
-  "main": "src/index.js",
+  "main": "sdk/index.js",
   "scripts": {},
   "browser": {
     "fs": false
