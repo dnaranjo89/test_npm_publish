@@ -1,6 +1,6 @@
 {
   "name": "echaloasuerte-js-sdk",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "JS SDK",
   "license": "Unlicense",
   "main": "sdk/index.js",
