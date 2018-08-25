@@ -1,7 +1,7 @@
 {
-  "name": "test_ridock_npm",
-  "version": "0.1.6",
-  "description": "ERROR_UNKNOWN",
+  "name": "echaloasuerte-js-sdk",
+  "version": "0.0.1",
+  "description": "JS SDK",
   "license": "Unlicense",
   "main": "src/index.js",
   "scripts": {},
